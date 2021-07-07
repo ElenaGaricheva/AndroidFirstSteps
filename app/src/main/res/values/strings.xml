@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AndroidFirstSteps</string>
+    <string name="text_view">Hello world!</string>
+    <string name="edit_text_hint">Enter text..</string>
+    <string name="send_button">Send</string>
+    <string name="toggle_button">Toggle</string>
+    <string name="switch_button">Switch</string>
+    <string name="checkbox_text">Check</string>
+    <string name="toggle_off">OFF</string>
+    <string name="toggle_on">ON</string>
 </resources>
