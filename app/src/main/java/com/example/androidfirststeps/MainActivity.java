@@ -10,9 +10,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_activity);
+        setContentView(R.layout.activity_personal_data);
     }
-
+/*
     public void onToggleClicked(View view) {
     }
 
@@ -20,5 +20,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-    }
+    }*/
 }
