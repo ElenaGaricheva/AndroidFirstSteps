@@ -7,7 +7,8 @@
     android:layout_weight="4"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:background="">
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -26,12 +27,12 @@
         android:layout_weight="1"
         android:gravity="end"
         android:text="3"
-        android:textColor="@color/smog_deep"
+        android:textColor="@color/smog_medium"
         android:textSize="40sp" />
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -62,9 +63,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
@@ -94,7 +94,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -125,7 +125,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
