@@ -3,7 +3,7 @@
     <style name="Theme.AndroidFirstSteps" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/smog_medium</item>
-        <item name="colorPrimaryVariant">@color/smog_deep</item>
+        <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/smog_lite</item>
@@ -16,16 +16,16 @@
     </style>
 
     <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+        <item name="materialThemeOverlay">@style/Theme.AndroidFirstSteps.Button</item>
         <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
         <item name="android:textColor">@color/smog_deep</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="ThemeOverlay.App.Button" parent="">
-    <item name="colorPrimary">@color/smog_lite</item>
-    <item name="colorOnPrimary">@color/smog_medium</item>
+    <style name="Theme.AndroidFirstSteps.Button" parent="">
+        <item name="colorPrimary">@color/smog_lite</item>
+        <item name="colorOnPrimary">@color/smog_medium</item>
     </style>
-
 
     <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
