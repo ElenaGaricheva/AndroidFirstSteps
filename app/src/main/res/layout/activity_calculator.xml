@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="60"
+    android:fitsSystemWindows="true"
+    android:layout_margin="20dp"
+    android:gravity="bottom|center_vertical"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:gravity="top|end"
+        android:text="2+1"
+        android:textColor="@color/smog_deep"
+        android:textSize="50sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:gravity="center_vertical|end"
+        android:text="3"
+        android:textColor="@color/smog_medium"
+        android:textSize="40sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="C"
+            android:textColor="@color/red" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="()"
+            android:textColor="@color/green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="%"
+            android:textColor="@color/green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="/"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="x"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:text="6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="-"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="1dp"
+            android:text="+/-"
+            android:textSize="26sp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="," />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="10dp"
+            android:text="="
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green" />
+    </LinearLayout>
+</LinearLayout>

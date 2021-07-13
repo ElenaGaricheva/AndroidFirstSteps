@@ -10,15 +10,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personal_data);
+        setContentView(R.layout.activity_calculator);
     }
-/*
-    public void onToggleClicked(View view) {
-    }
-
-    public void onCheckboxClicked(View view) {
-    }
-
-    public void sendMessage(View view) {
-    }*/
 }
