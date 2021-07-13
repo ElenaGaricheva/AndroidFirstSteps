@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:gravity="end"
         android:text="2+1"
@@ -25,12 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="30dp"
         android:layout_weight="1"
         android:gravity="end"
         android:text="3"
         android:textColor="@color/smog_medium"
-        android:textSize="40sp" />
+        android:textSize="40sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
