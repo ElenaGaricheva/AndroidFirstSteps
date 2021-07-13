@@ -11,8 +11,12 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="bottomAppBarStyle" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="materialButtonStyle">@style/AndroidFirstSteps.Button</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">@color/smog_medium</item>
+
     </style>
 
     <style name="AndroidFirstSteps.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
