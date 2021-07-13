@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginBottom="16dp"
     android:layout_weight="4"
+    android:fitsSystemWindows="true"
     android:gravity="bottom"
-    android:orientation="vertical"
-    android:background="@drawable/background"
-    android:fitsSystemWindows="true">
+    android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:gravity="end"
         android:text="2+1"
@@ -24,12 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:gravity="end"
         android:text="3"
         android:textColor="@color/smog_medium"
         android:textSize="40sp" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,27 +38,69 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginRight="10dp"
+            android:text="C"
+            android:textColor="@color/red" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
+            android:text="()"
+            android:textColor="@color/green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
+            android:text="%"
+            android:textColor="@color/green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginLeft="10dp"
+            android:text="/"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginRight="10dp"
             android:text="7" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="8" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="9" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginLeft="10dp"
             android:text="x"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -68,27 +111,31 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginRight="10dp"
             android:text="4" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="5" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="6" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginLeft="10dp"
             android:text="-"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -99,27 +146,31 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginRight="10dp"
             android:text="1" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="2" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="4" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginLeft="10dp"
             android:text="+"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -130,31 +181,34 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="C"
-            android:textColor="@color/red" />
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:text="+/-"
+            android:textSize="20sp" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
             android:text="0" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text=","
-            android:textColor="@color/green" />
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="4dp"
+            android:text="," />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginLeft="10dp"
             android:text="="
-            app:backgroundTint="@color/green"/>
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green" />
     </LinearLayout>
 
 </LinearLayout>
