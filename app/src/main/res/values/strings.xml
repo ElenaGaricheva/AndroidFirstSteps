@@ -8,4 +8,24 @@
     <string name="checkbox_text">Check</string>
     <string name="toggle_off">OFF</string>
     <string name="toggle_on">ON</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+    <string name="multiply">x</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="minus">-</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="plus">+</string>
+    <string name="plusOrMinus">+/-</string>
+    <string name="zero">0</string>
+    <string name="comma">,</string>
+    <string name="equalSign">=</string>
+    <string name="split">/</string>
+    <string name="percent">%</string>
+    <string name="brackets">()</string>
+    <string name="deleting">C</string>
 </resources>

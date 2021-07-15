@@ -10,24 +10,25 @@
     android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/inputField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="20"
         android:gravity="top|end"
-        android:text="2+1"
         android:textColor="@color/smog_deep"
         android:textSize="50sp" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/outputField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="20"
         android:gravity="center_vertical|end"
-        android:text="3"
         android:textColor="@color/smog_medium"
         android:textSize="40sp"/>
 
     <LinearLayout
+        android:id="@+id/container1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -35,39 +36,44 @@
         android:gravity="bottom">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleting"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
-            android:text="C"
+            android:text="@string/deleting"
             android:textColor="@color/red" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/brackets"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="()"
+            android:text="@string/brackets"
             android:textColor="@color/green" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/percent"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="%"
+            android:text="@string/percent"
             android:textColor="@color/green" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/split"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:text="/"
+            android:text="@string/split"
             android:textColor="@color/green" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/container2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -75,36 +81,41 @@
         android:gravity="bottom">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num7"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
-            android:text="7" />
+            android:text="@string/num7" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num8"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="8" />
+            android:text="@string/num8" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num9"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="9" />
+            android:text="@string/num9" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/multiply"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:text="x"
+            android:text="@string/multiply"
             android:textColor="@color/green" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/container3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -112,36 +123,41 @@
         android:gravity="bottom">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num4"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
-            android:text="4" />
+            android:text="@string/num4" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num5"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="5" />
+            android:text="@string/num5" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num6"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:text="6" />
+            android:text="@string/num6" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:text="-"
+            android:text="@string/minus"
             android:textColor="@color/green" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/container4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -149,36 +165,41 @@
         android:gravity="bottom">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num1"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="@string/num1" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num2"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="@string/num2" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/num3"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="@string/num3" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:text="+"
+            android:text="@string/plus"
             android:textColor="@color/green" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/container5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -186,33 +207,37 @@
         android:gravity="bottom">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/plusOrMinus"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="1dp"
-            android:text="+/-"
+            android:text="@string/plusOrMinus"
             android:textSize="26sp"
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/zero"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="0" />
+            android:text="@string/zero" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/comma"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="," />
+            android:text="@string/comma" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/equalSign"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginStart="10dp"
-            android:text="="
+            android:text="@string/equalSign"
             android:layout_weight="1"
             android:textColor="@color/white"
             app:backgroundTint="@color/green" />
