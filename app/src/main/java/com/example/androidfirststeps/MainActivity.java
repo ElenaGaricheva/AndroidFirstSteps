@@ -1,5 +1,6 @@
 package com.example.androidfirststeps;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initView();
     }
+
+    private final static String keyCalculator = "Calculator";
 
     private TextView inputField;
     private TextView outputField;
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         Button button = (Button) v;
-        String currentText = inputField.getText().toString();
+        calculator.setCurrentText(inputField.getText().toString());
 
         if (button.getId() == R.id.deleting) {
             inputField.setText(null);
@@ -74,16 +77,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 button.getId() == R.id.multiply ||
                 button.getId() == R.id.split) {
             calculator.setCurrentOperand(button.getText().toString());
-            calculator.setNum1(Integer.parseInt(currentText));
-            inputField.setText(currentText + button.getText().toString());
+            calculator.setNum1(Integer.parseInt(calculator.getCurrentText()));
+            inputField.setText(calculator.getCurrentText() + button.getText().toString());
         } else {
             {
-                currentText += button.getText().toString();
-                inputField.setText(currentText);
+                calculator.setCurrentText(calculator.getCurrentText() + button.getText().toString());
+                inputField.setText(calculator.getCurrentText());
 
                 if (calculator.getCurrentOperand() == null) {
-                    outputField.setText(currentText);
-                    calculator.setCurrentCalc(Integer.parseInt(currentText));
+                    calculator.setCurrentCalc(Integer.parseInt(calculator.getCurrentText()));
+                    outputField.setText(calculator.getCurrentText());
                 } else {
                     calculator.setNum2(button.getText().toString());
                     calculator.calculation();
@@ -91,5 +94,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putSerializable(keyCalculator, calculator);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        calculator = (Calculator) instanceState.getSerializable(keyCalculator);
+        setTextField();
+    }
+
+    private void setTextField() {
+        inputField.setText(calculator.getCurrentText());
+        outputField.setText(calculator.getCurrentCalc());
     }
 }
