@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Calculator implements Serializable {
     private int num1 = 0;
     private String num2 = "";
-    private String currentOperand = "";
+    private String currentOperand = null;
     private int currentCalc;
     private String currentText = "";
 
