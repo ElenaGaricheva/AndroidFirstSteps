@@ -99,13 +99,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
         super.onSaveInstanceState(instanceState);
-        instanceState.putSerializable(keyCalculator, calculator);
+        instanceState.putParcelable(keyCalculator, calculator);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
-        calculator = (Calculator) instanceState.getSerializable(keyCalculator);
+        calculator = (Calculator) instanceState.getParcelable(keyCalculator);
         setTextField();
     }
 

@@ -1,13 +1,38 @@
 package com.example.androidfirststeps;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Calculator implements Serializable {
+
+public class Calculator implements Parcelable {
     private int num1 = 0;
     private String num2 = "";
     private String currentOperand = null;
     private int currentCalc;
     private String currentText = "";
+
+    public Calculator() {
+    }
+
+    protected Calculator(Parcel in) {
+        num1 = in.readInt();
+        num2 = in.readString();
+        currentOperand = in.readString();
+        currentCalc = in.readInt();
+        currentText = in.readString();
+    }
+
+    public static final Creator<Calculator> CREATOR = new Creator<Calculator>() {
+        @Override
+        public Calculator createFromParcel(Parcel in) {
+            return new Calculator(in);
+        }
+
+        @Override
+        public Calculator[] newArray(int size) {
+            return new Calculator[size];
+        }
+    };
 
     public void setCurrentCalc(int currentCalc) {
         this.currentCalc += currentCalc;
@@ -63,5 +88,19 @@ public class Calculator implements Serializable {
         num1 = 0;
         currentCalc = 0;
         currentOperand = null;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(num1);
+        dest.writeString(num2);
+        dest.writeString(currentOperand);
+        dest.writeInt(currentCalc);
+        dest.writeString(currentText);
     }
 }
