@@ -37,37 +37,37 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/deleting"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:text="@string/deleting"
             android:textColor="@color/red" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/brackets"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/brackets"
             android:textColor="@color/green" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/percent"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/percent"
             android:textColor="@color/green" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/split"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/button_margin_start"
             android:text="@string/split"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -82,34 +82,34 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num7"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:text="@string/num7" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num8"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/num8" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num9"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/num9" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/button_margin_start"
             android:text="@string/multiply"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -124,34 +124,34 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num4"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:text="@string/num4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num5"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/num5" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num6"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:text="@string/num6" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/minus"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/button_margin_start"
             android:text="@string/minus"
             android:textColor="@color/green" />
     </LinearLayout>
@@ -166,33 +166,33 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num1"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:layout_weight="1"
             android:text="@string/num1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:layout_weight="1"
             android:text="@string/num2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/num3"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:layout_weight="1"
             android:text="@string/num3" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/plus"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/button_margin_start"
             android:layout_weight="1"
             android:text="@string/plus"
             android:textColor="@color/green" />
@@ -208,9 +208,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/plusOrMinus"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:layout_marginBottom="1dp"
             android:text="@string/plusOrMinus"
             android:textSize="26sp"
@@ -218,25 +218,25 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/zero"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:layout_weight="1"
             android:text="@string/zero" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/comma"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin_horizontal"
             android:layout_weight="1"
             android:text="@string/comma" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/equalSign"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/button_margin_start"
             android:text="@string/equalSign"
             android:layout_weight="1"
             android:textColor="@color/white"
