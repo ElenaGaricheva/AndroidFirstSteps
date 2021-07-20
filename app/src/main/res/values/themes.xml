@@ -16,6 +16,8 @@
         <item name="materialButtonStyle">@style/AndroidFirstSteps.Button</item>
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">@color/smog_medium</item>
+
+        <item name="android:textColor">@color/smog_deep</item>
     </style>
 
     <style name="AndroidFirstSteps.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">

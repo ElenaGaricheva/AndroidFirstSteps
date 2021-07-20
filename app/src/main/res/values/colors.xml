@@ -12,7 +12,8 @@
     <color name="smog_medium">#C8C5C5</color>
     <color name="red">#CA493F</color>
     <color name="green">#5AA50F</color>
+    <color name="dark_theme">#08090909</color>
 
-    <color name="helper">#2CAA30</color>
+    <color name="helper">#292C29</color>
 
 </resources>
