@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/inputField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/commonMargin"
+        android:gravity="top|end"
+        android:textColor="@color/smog_deep"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/outputField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/commonMargin"
+        android:gravity="center_vertical|end"
+        android:textColor="@color/smog_medium"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonsFlow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputField"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/buttonsFlow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="deleting,percent,split,multiply,plus,minus,equalSign,num1,num2,num3,num4,num5,plusOrMinus,brackets,num6,num7,num8,num9,zero,comma"
+        app:flow_horizontalGap="@dimen/commonMargin"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalGap="8dp"
+        app:flow_verticalStyle="packed"
+        app:flow_wrapMode="chain"
+        app:flow_verticalBias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outputField" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleting"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/deleting"
+        android:textColor="@color/red" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/brackets"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/brackets"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/percent"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/percent"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/split"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_weight="1"
+        android:text="@string/split"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/equalSign"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/equalSign"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num7"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num7" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num8"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num9"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num9" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/multiply"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/multiply"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num4"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num5"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num6"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/minus"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num1"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num2"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/num3"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/num3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/plus"
+        android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plusOrMinus"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/plusOrMinus"
+        android:textSize="26sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/zero"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/zero" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/comma"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/comma" />
+</androidx.constraintlayout.widget.ConstraintLayout>
