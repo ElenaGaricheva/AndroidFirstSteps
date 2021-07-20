@@ -2,6 +2,7 @@ package com.example.androidfirststeps;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.helper.widget.Flow;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -18,14 +19,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
-      //  initView();
+        initView();
     }
 
     private final static String keyCalculator = "Calculator";
 
     private TextView inputField;
     private TextView outputField;
-    private LinearLayout container1;
+    private Flow buttonsContainer;
 
     Calculator calculator;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         inputField = findViewById(R.id.inputField);
         outputField = findViewById(R.id.outputField);
-        container1 = findViewById(R.id.buttonsFlow);
+        buttonsContainer = findViewById(R.id.buttonsFlow);
 
         calculator = new Calculator();
 
@@ -41,9 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initButtonsClickListener() {
-            for (int i = 0; i < container1.getChildCount(); i++) {
-                Button button = (Button) container1.getChildAt(i);
-                button.setOnClickListener(this);
+        int[] buttonsId = buttonsContainer.getReferencedIds();
+        for (int id : buttonsId) {
+            Button button = findViewById(id);
+            button.setOnClickListener(this);
         }
     }
 
