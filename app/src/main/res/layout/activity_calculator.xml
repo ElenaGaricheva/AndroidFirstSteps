@@ -11,7 +11,6 @@
         android:layout_marginEnd="@dimen/commonMargin"
         android:gravity="top|end"
         android:textSize="50sp"
-        android:text="bfdbfb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +23,6 @@
         android:gravity="center_vertical|end"
         android:textColor="@color/smog_medium"
         android:textSize="40sp"
-        android:text="vrvrvrv"
         app:layout_constraintBottom_toTopOf="@id/buttonsFlow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
