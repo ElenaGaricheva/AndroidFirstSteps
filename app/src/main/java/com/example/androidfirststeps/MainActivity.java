@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
-        initView();
+      //  initView();
     }
 
     private final static String keyCalculator = "Calculator";
@@ -25,21 +26,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView inputField;
     private TextView outputField;
     private LinearLayout container1;
-    private LinearLayout container2;
-    private LinearLayout container3;
-    private LinearLayout container4;
-    private LinearLayout container5;
+
     Calculator calculator;
 
     private void initView() {
 
         inputField = findViewById(R.id.inputField);
         outputField = findViewById(R.id.outputField);
-        container1 = findViewById(R.id.container1);
-        container2 = findViewById(R.id.container2);
-        container3 = findViewById(R.id.container3);
-        container4 = findViewById(R.id.container4);
-        container5 = findViewById(R.id.container5);
+        container1 = findViewById(R.id.buttonsFlow);
 
         calculator = new Calculator();
 
@@ -47,14 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initButtonsClickListener() {
-        LinearLayout[] containers = new LinearLayout[]{
-                container1, container2, container3, container4, container5};
-
-        for (LinearLayout container : containers) {
-            for (int i = 0; i < container.getChildCount(); i++) {
-                Button button = (Button) container.getChildAt(i);
+            for (int i = 0; i < container1.getChildCount(); i++) {
+                Button button = (Button) container1.getChildAt(i);
                 button.setOnClickListener(this);
-            }
         }
     }
 
