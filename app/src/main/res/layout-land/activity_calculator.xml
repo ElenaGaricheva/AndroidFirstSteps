@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/commonMargin"
         android:gravity="top|end"
+        android:textColor="@color/smog_deep"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,7 @@
         android:id="@+id/buttonsFlow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="deleting,brackets,percent,split,num7,num8,num9,multiply,num4,num5,num6,minus,num1,num2,num3,plus,plusOrMinus,zero,comma,equalSign"
+        app:constraint_referenced_ids="deleting,percent,split,multiply,plus,minus,equalSign,num1,num2,num3,num4,num5,plusOrMinus,brackets,num6,num7,num8,num9,zero,comma"
         app:flow_horizontalGap="@dimen/commonMargin"
         app:flow_horizontalStyle="packed"
         app:flow_verticalGap="8dp"
@@ -73,6 +74,14 @@
         android:layout_weight="1"
         android:text="@string/split"
         android:textColor="@color/green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/equalSign"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/equalSign"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/num7"
@@ -167,12 +176,4 @@
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:text="@string/comma" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/equalSign"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:text="@string/equalSign"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/green" />
 </androidx.constraintlayout.widget.ConstraintLayout>

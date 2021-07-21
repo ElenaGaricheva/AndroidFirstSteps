@@ -17,17 +17,18 @@
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">@color/smog_medium</item>
 
+        <item name="android:textColor">@color/smog_deep</item>
     </style>
 
     <style name="AndroidFirstSteps.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/smog_deep</item>
         <item name="backgroundTint">@color/smog_lite</item>
-        <item name="android:textSize">30sp</item>
-        <item name="strokeWidth">0dp</item>
-        <item name="cornerRadius">50dp</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-        <item name="android:insetLeft">0dp</item>
-        <item name="android:insetRight">0dp</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="strokeWidth">@dimen/border_width</item>
+        <item name="cornerRadius">@dimen/button_radius</item>
+        <item name="android:insetTop">@dimen/button_inset</item>
+        <item name="android:insetBottom">@dimen/button_inset</item>
+        <item name="android:insetLeft">@dimen/button_inset</item>
+        <item name="android:insetRight">@dimen/button_inset</item>
     </style>
 </resources>

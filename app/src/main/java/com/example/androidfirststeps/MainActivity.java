@@ -2,8 +2,12 @@ package com.example.androidfirststeps;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.helper.widget.Flow;
 
 import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,22 +28,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView inputField;
     private TextView outputField;
-    private LinearLayout container1;
-    private LinearLayout container2;
-    private LinearLayout container3;
-    private LinearLayout container4;
-    private LinearLayout container5;
+    private Flow buttonsContainer;
+
     Calculator calculator;
 
     private void initView() {
 
         inputField = findViewById(R.id.inputField);
         outputField = findViewById(R.id.outputField);
-        container1 = findViewById(R.id.container1);
-        container2 = findViewById(R.id.container2);
-        container3 = findViewById(R.id.container3);
-        container4 = findViewById(R.id.container4);
-        container5 = findViewById(R.id.container5);
+        buttonsContainer = findViewById(R.id.buttonsFlow);
 
         calculator = new Calculator();
 
@@ -47,14 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initButtonsClickListener() {
-        LinearLayout[] containers = new LinearLayout[]{
-                container1, container2, container3, container4, container5};
-
-        for (LinearLayout container : containers) {
-            for (int i = 0; i < container.getChildCount(); i++) {
-                Button button = (Button) container.getChildAt(i);
-                button.setOnClickListener(this);
-            }
+        int[] buttonsId = buttonsContainer.getReferencedIds();
+        for (int id : buttonsId) {
+            Button button = findViewById(id);
+            button.setOnClickListener(this);
         }
     }
 
@@ -100,6 +93,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
         super.onSaveInstanceState(instanceState);
         instanceState.putParcelable(keyCalculator, calculator);
+        int currentOrientation = this.getResources().getConfiguration().orientation;
+
+        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT){
+            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        else{
+            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
     }
 
     @Override
