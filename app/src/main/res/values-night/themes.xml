@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.AndroidFirstSteps" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    <style name="Theme.AndroidFirstSteps.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:forceDarkAllowed" tools:targetApi="29">true</item>
 
         <item name="colorPrimary">@color/smog_medium</item>
@@ -14,14 +14,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="bottomAppBarStyle" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="materialButtonStyle">@style/AndroidFirstSteps.Button</item>
+        <item name="materialButtonStyle">@style/AndroidFirstSteps.Button.Dark</item>
         <item name="android:navigationBarColor">@color/dark_theme</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">@color/smog_medium</item>
 
         <item name="android:textColor">@color/smog_medium</item>
     </style>
 
-    <style name="AndroidFirstSteps.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="AndroidFirstSteps.Button.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/smog_deep</item>
         <item name="backgroundTint">@color/smog_medium</item>
         <item name="android:textSize">@dimen/button_text_size</item>
