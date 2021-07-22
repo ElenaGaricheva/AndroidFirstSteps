@@ -6,20 +6,22 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/back_to_cacl"
-        app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeWidth="0dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:icon="@drawable/outline_arrow_back_24"/>
+        app:icon="@drawable/outline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp" />
 
     <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/themeSwitcher"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/light_theme"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -27,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="LIGHT" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/dark_theme"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"

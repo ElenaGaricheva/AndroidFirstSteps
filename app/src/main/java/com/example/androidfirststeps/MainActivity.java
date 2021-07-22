@@ -19,17 +19,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView outputField;
     private Flow buttonsContainer;
     private Button settingsButton;
-    public static Integer calcTheme = R.style.Theme_AndroidFirstSteps;
     private final static String keyCalculator = "Calculator";
 
     Calculator calculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-/*        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        int theme = sp.getInt("THEME", R.style.Theme_AndroidFirstSteps_Dark);*/
-
-        setTheme(calcTheme);
+        if (Calculator.getThemeColor() == 0){
+            setTheme(R.style.Theme_AndroidFirstSteps);
+        }else setTheme(Calculator.getThemeColor());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
@@ -50,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         settingsButton.setOnClickListener(v -> {
             Intent goToSettings = new Intent(MainActivity.this, CalculatorSettings.class);
+            goToSettings.putExtra("CALC_THEME", Calculator.getThemeColor());
             startActivity(goToSettings);
         });
     }
@@ -106,10 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         instanceState.putParcelable(keyCalculator, calculator);
         int currentOrientation = this.getResources().getConfiguration().orientation;
 
-        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT){
+        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT) {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-        else{
+        } else {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
     }
@@ -117,16 +115,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
-        calculator = (Calculator) instanceState.getParcelable(keyCalculator);
+        calculator = instanceState.getParcelable(keyCalculator);
         setTextField();
     }
 
     private void setTextField() {
         inputField.setText(calculator.getCurrentText());
         outputField.setText(calculator.getCurrentCalc());
-    }
-
-    public void setCalcTheme(Integer calcTheme) {
-        this.calcTheme = calcTheme;
     }
 }

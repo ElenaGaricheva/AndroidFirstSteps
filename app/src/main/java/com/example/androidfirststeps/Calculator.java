@@ -12,6 +12,7 @@ public class Calculator implements Parcelable {
     private String currentOperand = null;
     private int currentCalc;
     private String currentText = "";
+    private static int themeColor;
 
     public Calculator() {
     }
@@ -104,5 +105,13 @@ public class Calculator implements Parcelable {
         dest.writeString(currentOperand);
         dest.writeInt(currentCalc);
         dest.writeString(currentText);
+    }
+
+    public static int getThemeColor() {
+        return themeColor;
+    }
+
+    public static void setThemeColor(int themeColor) {
+        Calculator.themeColor = themeColor;
     }
 }
