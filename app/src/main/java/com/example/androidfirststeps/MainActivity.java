@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (Calculator.getThemeColor() == 0){
-            setTheme(R.style.Theme_AndroidFirstSteps);
-        }else setTheme(Calculator.getThemeColor());
+        setTheme(Calculator.getThemeColor());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);

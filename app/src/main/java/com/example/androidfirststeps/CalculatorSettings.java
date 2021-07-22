@@ -1,6 +1,7 @@
 package com.example.androidfirststeps;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -49,6 +50,8 @@ public class CalculatorSettings extends AppCompatActivity {
         });
 
         backToCalc.setOnClickListener(v -> {
+            Intent backToCalc = new Intent(CalculatorSettings.this, MainActivity.class);
+            startActivity(backToCalc);
             finish();
         });
     }

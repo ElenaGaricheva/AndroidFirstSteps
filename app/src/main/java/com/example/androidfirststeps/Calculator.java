@@ -12,7 +12,7 @@ public class Calculator implements Parcelable {
     private String currentOperand = null;
     private int currentCalc;
     private String currentText = "";
-    private static int themeColor;
+    private static int themeColor = R.style.Theme_AndroidFirstSteps;
 
     public Calculator() {
     }
