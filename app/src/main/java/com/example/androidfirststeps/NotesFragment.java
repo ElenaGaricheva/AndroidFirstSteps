@@ -31,21 +31,40 @@ public class NotesFragment extends Fragment {
 
     private void initList(View view) {
         LinearLayout notesView = (LinearLayout) view;
-        Note[] notes = new Note[5];
+        Note[] notes = {
+                new Note("name1", "desc1", "date1"),
+                new Note("name2", "desc2", "date2")
+        };
 
         for (Note note : notes) {
-            LinearLayout noteView = (LinearLayout) view;
+            LinearLayout noteView = createNoteView(note);
             noteView.setOrientation(LinearLayout.VERTICAL);
-            TextView noteNameView = new TextView(getContext());
-            TextView noteDescriptionView = new TextView(getContext());
-            TextView creationDateView = new TextView(getContext());
-            noteNameView.setText(note.getNoteName());
-            noteDescriptionView.setText(note.getNoteDescription());
-            creationDateView.setText(note.getCreationDate());
-            noteView.addView(noteNameView);
-            noteView.addView(noteDescriptionView);
-            noteView.addView(creationDateView);
+            noteView.setPadding(0, 0, 0, 16);
+
             notesView.addView(noteView);
         }
+    }
+
+    private LinearLayout createNoteView(Note record) {
+        LinearLayout note = new LinearLayout(getContext());
+        note.setOrientation(LinearLayout.VERTICAL);
+        note.setPadding(0, 0, 0, 16);
+
+        TextView noteNameView = new TextView(getContext());
+        noteNameView.setTextSize(24);
+        TextView noteDescriptionView = new TextView(getContext());
+        noteDescriptionView.setTextSize(16);
+        TextView creationDateView = new TextView(getContext());
+        creationDateView.setTextSize(8);
+
+        noteNameView.setText(record.getNoteName());
+        noteDescriptionView.setText(record.getNoteDescription());
+        creationDateView.setText(record.getCreationDate());
+
+        note.addView(noteNameView);
+        note.addView(noteDescriptionView);
+        note.addView(creationDateView);
+
+        return note;
     }
 }
