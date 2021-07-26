@@ -3,6 +3,8 @@ package com.example.androidfirststeps;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class Calculator implements Parcelable {
     private int num1 = 0;
@@ -10,6 +12,7 @@ public class Calculator implements Parcelable {
     private String currentOperand = null;
     private int currentCalc;
     private String currentText = "";
+    private static int themeColor = R.style.Theme_AndroidFirstSteps;
 
     public Calculator() {
     }
@@ -102,5 +105,13 @@ public class Calculator implements Parcelable {
         dest.writeString(currentOperand);
         dest.writeInt(currentCalc);
         dest.writeString(currentText);
+    }
+
+    public static int getThemeColor() {
+        return themeColor;
+    }
+
+    public static void setThemeColor(int themeColor) {
+        Calculator.themeColor = themeColor;
     }
 }

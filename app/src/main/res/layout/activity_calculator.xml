@@ -4,6 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/settings_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/outline_settings_24"
+        app:layout_constraintEnd_toStartOf="@id/inputField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/inputField"
         android:layout_width="0dp"
@@ -12,7 +25,6 @@
         android:gravity="top|end"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -36,10 +48,10 @@
         app:constraint_referenced_ids="deleting,brackets,percent,split,num7,num8,num9,multiply,num4,num5,num6,minus,num1,num2,num3,plus,plusOrMinus,zero,comma,equalSign"
         app:flow_horizontalGap="@dimen/commonMargin"
         app:flow_horizontalStyle="packed"
+        app:flow_verticalBias="1"
         app:flow_verticalGap="8dp"
         app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
-        app:flow_verticalBias="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

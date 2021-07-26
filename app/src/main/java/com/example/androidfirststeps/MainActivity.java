@@ -5,42 +5,50 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.helper.widget.Flow;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private TextView inputField;
+    private TextView outputField;
+    private Flow buttonsContainer;
+    private Button settingsButton;
+    private final static String keyCalculator = "Calculator";
+
+    Calculator calculator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(Calculator.getThemeColor());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
         initView();
     }
 
-    private final static String keyCalculator = "Calculator";
-
-    private TextView inputField;
-    private TextView outputField;
-    private Flow buttonsContainer;
-
-    Calculator calculator;
-
     private void initView() {
 
         inputField = findViewById(R.id.inputField);
         outputField = findViewById(R.id.outputField);
         buttonsContainer = findViewById(R.id.buttonsFlow);
+        settingsButton = findViewById(R.id.settings_button);
 
         calculator = new Calculator();
 
         initButtonsClickListener();
+
+        settingsButton.setOnClickListener(v -> {
+            Intent goToSettings = new Intent(MainActivity.this, CalculatorSettings.class);
+            goToSettings.putExtra("CALC_THEME", Calculator.getThemeColor());
+            startActivity(goToSettings);
+        });
     }
 
     private void initButtonsClickListener() {
@@ -95,10 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         instanceState.putParcelable(keyCalculator, calculator);
         int currentOrientation = this.getResources().getConfiguration().orientation;
 
-        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT){
+        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT) {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-        else{
+        } else {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
     }
@@ -106,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
-        calculator = (Calculator) instanceState.getParcelable(keyCalculator);
+        calculator = instanceState.getParcelable(keyCalculator);
         setTextField();
     }
 
